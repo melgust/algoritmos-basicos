@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 	//string ruta = "C:\ejercicios\arreglos.cpp";
-	fstream archivo("C:/ejercicios/oracion.txt");
+	fstream archivo("oracion.txt");
 	string linea, alreves;
 	if (archivo.is_open()) {
 		getline(archivo, linea);
@@ -15,9 +15,9 @@ int main() {
 			alreves = alreves + linea[i];
 		}
 		if (linea == alreves) {
-			//es
+			cout << "Palindroma";
 		} else {
-			//no es
+			cout << "No es palindroma";
 		}
 	} else {		
 		cout << "No se puede abrir el archivo";
