@@ -17,33 +17,34 @@ typedef struct {
 } Alumno;
 
 int main() {
-	Alumno lista[2];
+	int cantidad = 2;
+	Alumno lista[cantidad];
 	int i;
-	for (i = 0; i < 2; i++) { 
+	for (i = 0; i < cantidad; i++) { 
 		cout << "Ingresando datos de la persona no. " << i + 1 << endl;
 		cout << "Nombre: ";
-		Alumno p;	
-		getline(cin, p.nombre);
+		Alumno alumno;	
+		getline(cin, alumno.nombre);
 		cout << "Telefono: ";
-		getline(cin, p.telefono);
+		getline(cin, alumno.telefono);
 		cout << "Correo: ";
-		getline(cin, p.correo);
+		getline(cin, alumno.correo);
 		cout << "Ingrese anio de su nacimiento: ";
-		cin >> p.fechaNacimiento.anio;
+		cin >> alumno.fechaNacimiento.anio;
 		cout << "Ingrese mes de su nacimiento: ";
-		cin >> p.fechaNacimiento.mes;
+		cin >> alumno.fechaNacimiento.mes;
 		cout << "Ingrese dia de su nacimiento: ";
-		cin >> p.fechaNacimiento.dia;
-		lista[i] = p;
+		cin >> alumno.fechaNacimiento.dia;
+		lista[i] = alumno;
 		cin.ignore();
 	}
-	for (i = 0; i < 2; i++) {
-		Alumno p = lista[i];
+	for (i = 0; i < cantidad; i++) {
+		Alumno alumno = lista[i];
 		cout << "Los datos ingresados son: \n";
-		cout << "Nombre: " << p.nombre << endl;
-		cout << "Telefono: " << p.telefono << endl;
-		cout << "Correo: " << p.correo << endl;
-		cout << "Fecha de nacimiento: " << p.fechaNacimiento.dia << "/" << p.fechaNacimiento.mes << "/" << p.fechaNacimiento.anio << endl;
+		cout << "Nombre: " << alumno.nombre << endl;
+		cout << "Telefono: " << alumno.telefono << endl;
+		cout << "Correo: " << alumno.correo << endl;
+		cout << "Fecha de nacimiento: " << alumno.fechaNacimiento.dia << "/" << alumno.fechaNacimiento.mes << "/" << alumno.fechaNacimiento.anio << endl;
 	}
 	return 0;
 }
